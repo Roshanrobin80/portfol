@@ -1,61 +1,325 @@
 body {
-    font-family: "Lato", sans-serif;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* About Section */
+.about-section {
+  background-color: white;
+  padding: 60px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #333;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-image {
   
-  .sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: left;
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #555;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+}
+
+/* CV Section */
+#cv {
+  text-align: center;
+  padding: 60px 0;
+}
+
+#cv iframe {
+  width: 80%;
+  height: 600px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#cv p {
+  font-size: 1em;
+  color: #666;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  
-  .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+
+  .about-text {
+    font-size: 1em;
   }
-  
-  .sidebar a:hover {
-    color: #f1f1f1;
+
+  #cv iframe {
+    width: 100%;
   }
-  
-  .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-  }
-  
-  .openbtn:hover {
-    background-color: #444;
-  }
-  
-  #main {
-    transition: margin-left .5s;
-    padding: 16px;
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
-  }
+}
+
+
+/* Contact Section Styles */
+.contact-section {
+background-color: #fff;
+padding: 40px;
+margin: 20px auto;
+max-width: 600px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+font-family: 'Arial', sans-serif;
+}
+
+.contact-title {
+text-align: center;
+color: #333;
+font-size: 36px;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 2px;
+/* border-bottom: 2px solid #333; */
+display: inline-block;
+padding-bottom: 10px;
+margin-bottom: 30px;
+}
+
+.contact-form {
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.contact-input, .contact-textarea {
+padding: 10px;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 4px;
+transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-input:focus, .contact-textarea:focus {
+border-color: #007bff;
+box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.contact-textarea {
+resize: vertical;
+}
+
+.contact-btn {
+padding: 12px 20px;
+font-size: 16px;
+color: white;
+background-color: #333;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.contact-section {
+padding: 20px;
+}
+
+.contact-title {
+font-size: 28px;
+}
+
+.contact-form {
+gap: 10px;
+}
+
+.contact-input, .contact-textarea {
+font-size: 14px;
+}
+
+.contact-btn {
+font-size: 14px;
+}
+}
+
+/* Projects Section Styles */
+.projects-section {
+background-color: #f9f9f9;
+padding: 60px 0;
+}
+
+.projects-title {
+text-align: center;
+font-size: 2.5em;
+color: #333;
+margin-bottom: 20px;
+}
+
+.projects-description {
+text-align: center;
+font-size: 1.1em;
+color: #666;
+margin-bottom: 40px;
+}
+
+/* Grid Layout for Projects */
+.projects-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 30px;
+justify-items: center;
+}
+
+/* Individual Project Card */
+.project-card {
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+width: 100%;
+height: 200px;
+object-fit: cover;
+border-radius: 8px;
+}
+
+.project-card h3 {
+font-size: 1.5em;
+color: #333;
+margin-top: 15px;
+}
+
+.project-card p {
+font-size: 1em;
+color: #666;
+margin: 10px 0;
+}
+
+.project-link {
+display: inline-block;
+padding: 10px 20px;
+background-color: #007bff;
+color: white;
+text-decoration: none;
+border-radius: 4px;
+font-size: 1.1em;
+margin-top: 10px;
+transition: background-color 0.3s ease;
+}
+
+/* .project-link:hover {
+background-color: #0056b3;
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.projects-grid {
+grid-template-columns: 1fr;
+}
+
+.projects-title {
+font-size: 2em;
+}
+}

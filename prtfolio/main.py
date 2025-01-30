@@ -1,13 +1,15 @@
-from flask import Flask,render_template,request
 import sqlite3
-con=sqlite3.connect("/home/novavi/Documents/roshan/flask/dbs.db")
+from flask import Flask, render_template
+
+con = sqlite3.connect("c:/Users/My Pc/OneDrive/Documents/roshan/portfol/prtfolio/dbs.db")
 try:
-    con.execute("create table std(name text,age int,email email)")
-except:
+    con.execute("create table std(name text, age int, email text)")
+except sqlite3.OperationalError:
     pass
-set FLASK_APP=main.py
-app=Flask(__name__)
+
+app = Flask(__name__)
 
 @app.route('/')
 def Home():
-    return render_template('htm.html')
+    return render_template('index.html')
+
