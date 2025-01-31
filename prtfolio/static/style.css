@@ -323,3 +323,23 @@ grid-template-columns: 1fr;
 font-size: 2em;
 }
 }
+
+footer {
+  text-align: center;
+  background: #111;
+  color: white;
+  /* padding: 10px 0; */
+}
+
+footer .social-links a i {
+  margin-right: 5px;
+  font-size: 1.2em; /* Adjust size of the icon */
+}
+
+footer .social-links a:hover {
+  text-decoration: underline;
+}
+
+footer .social-links a {
+  color: #fff;
+}

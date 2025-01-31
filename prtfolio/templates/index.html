@@ -3,6 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
   <style>
     /* Add some basic styling for the sidebar and main content */
     body {
@@ -107,8 +108,8 @@
       RESUME
     </h2>  
     <div>
-      <iframe src="/static/images/Grey Modern Professional CV Resume.pdf" width="80%" height="600px">
-        <p>Your browser does not support embedded PDFs. <a href="/static/images/Grey Modern Professional CV Resume.pdf">Download it here.</a></p>
+      <iframe src="/static/images/Roshan cv.pdf" width="80%" height="600px">
+        <p>Your browser does not support embedded PDFs. <a href="/static/images/Roshan cv.pdf">Download it here.</a></p>
       </iframe>
     </div>
   </section>
@@ -150,11 +151,30 @@
       <form action="/contact" method="post" class="contact-form">
         <input type="text" name="name" placeholder="Your Name" required class="contact-input">
         <input type="email" name="email" placeholder="Your Email" required class="contact-input">
-        <textarea name="message" rows="5" placeholder="Your Message" required class="contact-textarea"></textarea>
+        <textarea name="msg"  rows="5" placeholder="Your Message" required class="contact-textarea"></textarea>
         <button type="submit" class="contact-btn">Send Message</button>
       </form>
     </section>
   </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="contact-info">
+        <h3>Connect with me</h3>
+        <p>Email: <a href="mailto:your.email@example.com">roshanrobin220303@gmail.com</a></p>
+        <p>Phone: 7306854115</p>
+      </div>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/roshan-robin-3bb792348/" target="_blank"><i class="fa-brands fa-linkedin-in fa-lg"></i></a>
+        <a href="https://github.com/Roshanrobin80" target="_blank"><i class="fa-brands fa-github fa-lg"></i> </a>
+        <a href="https://www.instagram.com/roshanrobinn/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
+      </div>
+      <div class="copyright">
+        <p>© 2025 Roshan Robin. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
 
 
 
